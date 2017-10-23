@@ -1,4 +1,4 @@
-//Startup point for the client side application
+// Startup point for the client side application
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -21,11 +21,11 @@ const store = createStore(
   applyMiddleware(thunk.withExtraArgument(axiosInstance))
 );
 
-
 ReactDOM.hydrate(
   <Provider store={store}>
     <BrowserRouter>
       <div>{renderRoutes(Routes)}</div>
     </BrowserRouter>
   </Provider>,
-  document.querySelector('#root'));
+  document.querySelector('#root')
+);

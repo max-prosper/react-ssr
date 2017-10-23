@@ -4,7 +4,7 @@ import Header from './components/Header';
 import { fetchCurrentUser } from './actions';
 
 const App = ({ route }) => {
-	return (
+  return (
     <div>
       <Header />
       {renderRoutes(route.routes)}
@@ -13,6 +13,6 @@ const App = ({ route }) => {
 };
 
 export default {
-	component: App,
+  component: App,
   loadData: ({ dispatch }) => dispatch(fetchCurrentUser())
 };
